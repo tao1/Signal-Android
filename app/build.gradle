@@ -54,7 +54,7 @@ repositories {
 
 protobuf {
     protoc {
-        artifact = 'com.google.protobuf:protoc:3.10.0'
+        artifact = 'com.google.protobuf:protoc:3.19.1'
     }
     generateProtoTasks {
         all().each { task ->
@@ -418,6 +418,7 @@ dependencies {
         }
     }
     implementation libs.androidx.window
+    implementation libs.androidx.window.java
     implementation libs.androidx.recyclerview
     implementation libs.material.material
     implementation libs.androidx.legacy.support
@@ -438,6 +439,7 @@ dependencies {
     implementation libs.androidx.camera.camera2
     implementation libs.androidx.camera.lifecycle
     implementation libs.androidx.camera.view
+    implementation libs.androidx.media
     implementation libs.androidx.concurrent.futures
     implementation libs.androidx.autofill
     implementation libs.androidx.biometric

@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.4.32'
+    ext.kotlin_version = '1.5.31'
     repositories {
         google()
         mavenCentral()
@@ -31,15 +31,15 @@ buildscript {
 }
 
 ext {
-    BUILD_TOOL_VERSION = '30.0.2'
+    BUILD_TOOL_VERSION = '31.0.0'
 
-    COMPILE_SDK = 30
-    TARGET_SDK  = 30
+    COMPILE_SDK = 31
+    TARGET_SDK  = 31
     MINIMUM_SDK = 19
 
     JAVA_VERSION = JavaVersion.VERSION_1_8
 
-    LIBSIGNAL_CLIENT_VERSION = '0.9.4'
+    LIBSIGNAL_CLIENT_VERSION = '0.9.8'
 }
 
 wrapper {

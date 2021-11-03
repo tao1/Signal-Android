@@ -23,7 +23,7 @@ import java.util.List;
 @SuppressWarnings("UnstableApiUsage")
 public final class AlertDialogBuilderDetector extends Detector implements Detector.UastScanner {
 
-  static final Issue ALERT_DIALOG_BUILDER_USAGE = Issue.create("AlertDialogBuilderUsage",
+  public static final Issue ALERT_DIALOG_BUILDER_USAGE = Issue.Companion.create("AlertDialogBuilderUsage",
                                                                "Creating dialog with AlertDialog.Builder instead of MaterialAlertDialogBuilder",
                                                                "Signal utilizes MaterialAlertDialogBuilder for more consistent and pleasant AlertDialogs.",
                                                                Category.MESSAGES,

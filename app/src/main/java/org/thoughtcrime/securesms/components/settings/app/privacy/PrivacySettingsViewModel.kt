@@ -113,7 +113,7 @@ class PrivacySettingsViewModel(
     private val sharedPreferences: SharedPreferences,
     private val repository: PrivacySettingsRepository
   ) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
       return requireNotNull(modelClass.cast(PrivacySettingsViewModel(sharedPreferences, repository)))
     }
   }

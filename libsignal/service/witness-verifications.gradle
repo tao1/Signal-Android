@@ -3,29 +3,29 @@
 dependencyVerification {
     verify = [
 
-        ['com.fasterxml.jackson.core:jackson-annotations:2.9.0',
-         '45d32ac61ef8a744b464c54c2b3414be571016dd46bfc2bec226761cf7ae457a'],
+        ['com.fasterxml.jackson.core:jackson-annotations:2.13.0',
+         '81f9724d8843e8b08f8f6c0609e7a2b030d00c34861c4ac7e2099a7235047d6f'],
 
-        ['com.fasterxml.jackson.core:jackson-core:2.9.9',
-         '3083079be6088db2ed0a0c6ff92204e0aa48fa1de9db5b59c468f35acf882c2c'],
+        ['com.fasterxml.jackson.core:jackson-core:2.13.0',
+         '348bc59b348df2e807b356f1d62d2afb41a974073328abc773eb0932b855d2c8'],
 
-        ['com.fasterxml.jackson.core:jackson-databind:2.9.9.2',
-         'fb262d42ea2de98044b62d393950a5aa050435fec38bbcadf2325cf7dc41b848'],
+        ['com.fasterxml.jackson.core:jackson-databind:2.13.0',
+         '9c826d27176268777adcf97e1c6e2051c7e33a7aaa2c370c2e8c6077fd9da3f4'],
 
-        ['com.google.protobuf:protobuf-javalite:3.10.0',
-         '215a94dbe100130295906b531bb72a26965c7ac8fcd9a75bf8054a8ac2abf4b4'],
+        ['com.google.protobuf:protobuf-javalite:3.19.1',
+         '865210ede9acb33456ae00af4e6d02b76c09c1f7622df870a8bd2290aa5ce8d9'],
 
-        ['com.googlecode.libphonenumber:libphonenumber:8.12.17',
-         '729483057ef874b01537da8395d67e23b419d504f8ff29ddf5f69da21bf816ac'],
+        ['com.googlecode.libphonenumber:libphonenumber:8.12.36',
+         '327c36a7e07f2077d10db41daa0ce138d8f0e6f91846bd1448d2c66c6d2b10f4'],
 
-        ['com.squareup.okhttp3:okhttp:3.12.10',
-         '3cb8e21cd3ab10d390448f5a475c960732efab583a09c39f06f866a7ed819ebc'],
+        ['com.squareup.okhttp3:okhttp:3.14.9',
+         '2570fab55515cbf881d7a4ceef49fc515490bc027057e666776a2832465aeca0'],
 
-        ['com.squareup.okio:okio:1.15.0',
-         '693fa319a7e8843300602b204023b7674f106ebcb577f2dd5807212b66118bd2'],
+        ['com.squareup.okio:okio:1.17.2',
+         'f80ce42d2ffac47ad4c47e1d6f980d604d247ceb1a886705cf4581ab0c9fe2b8'],
 
-        ['io.reactivex.rxjava3:rxjava:3.0.13',
-         '598abaf71dbc970dd0727e6d5f4f786dc999df5b972cbf261316a32e155b2c69'],
+        ['io.reactivex.rxjava3:rxjava:3.1.2',
+         '8d784075bec0b7c55042c109a4de8923b3b6d2ebd2e00912d518f07240f9c23a'],
 
         ['org.reactivestreams:reactive-streams:1.0.3',
          '1dee0481072d19c929b623e155e14d2f6085dc011529a0a0dbefc84cf571d865'],
@@ -33,10 +33,10 @@ dependencyVerification {
         ['org.signal:zkgroup-java:0.8.2',
          'eaae035a974e0179052d9b90fb4dc4d5b8bd2fdb0b20ed36824f2bdf9fb6dd36'],
 
-        ['org.threeten:threetenbp:1.3.6',
-         'f4c23ffaaed717c3b99c003e0ee02d6d66377fd47d866fec7d971bd8644fc1a7'],
+        ['org.threeten:threetenbp:1.5.1',
+         '4342ee04d87040f71b0aa9188ee960780ef2da734e32a8d43a522a580b5e0f3b'],
 
-        ['org.whispersystems:signal-client-java:0.9.7',
-         'b9c141324db38e940e910c71d3c8474679a9f6f46c4d4f3116ec63a1e1368ffc'],
+        ['org.whispersystems:signal-client-java:0.9.8',
+         '1550b026dcbed1ede67fbe2da39f31c805c57e4eb79fc05de18ef466e53cfa5d'],
     ]
 }

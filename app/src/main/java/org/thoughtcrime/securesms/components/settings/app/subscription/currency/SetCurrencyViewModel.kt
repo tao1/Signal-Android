@@ -73,7 +73,7 @@ class SetCurrencyViewModel(val isBoost: Boolean) : ViewModel() {
   }
 
   class Factory(private val isBoost: Boolean) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
       return modelClass.cast(SetCurrencyViewModel(isBoost))!!
     }
   }

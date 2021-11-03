@@ -11,7 +11,7 @@ import java.util.Objects;
 import okhttp3.MediaType;
 import okhttp3.ResponseBody;
 
-import static okhttp3.internal.Util.UTF_8;
+import static java.nio.charset.StandardCharsets.UTF_8;
 
 public final class OkHttpUtil {
 

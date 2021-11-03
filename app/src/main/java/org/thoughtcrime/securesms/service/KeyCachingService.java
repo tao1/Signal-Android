@@ -298,7 +298,7 @@ public class KeyCachingService extends Service {
 
   private static PendingIntent buildExpirationPendingIntent(@NonNull Context context) {
     Intent expirationIntent = new Intent(PASSPHRASE_EXPIRED_EVENT, null, context, KeyCachingService.class);
-    return PendingIntent.getService(context, 0, expirationIntent, 0);
+    return PendingIntent.getService(context, 0, expirationIntent, PendingIntent.FLAG_IMMUTABLE);
   }
 
   @Override

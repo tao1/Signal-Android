@@ -82,7 +82,11 @@ public class DeviceToDeviceTransferService extends Service implements ShutdownCa
   }
 
   public static void stop(@NonNull Context context) {
-    context.startService(new Intent(context, DeviceToDeviceTransferService.class).setAction(ACTION_STOP));
+    try {
+      context.startService(new Intent(context, DeviceToDeviceTransferService.class).setAction(ACTION_STOP));
+    } catch (Exception e) {
+      Log.w(TAG, "Cannot stop DeviceToDeviceTransferService", e);
+    }
   }
 
   @Override

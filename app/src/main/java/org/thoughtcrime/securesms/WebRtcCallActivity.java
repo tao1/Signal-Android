@@ -40,9 +40,11 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.content.ContextCompat;
 import androidx.core.util.Consumer;
 import androidx.lifecycle.ViewModelProviders;
-import androidx.window.DisplayFeature;
-import androidx.window.FoldingFeature;
-import androidx.window.WindowLayoutInfo;
+import androidx.window.java.layout.WindowInfoRepositoryCallbackAdapter;
+import androidx.window.layout.DisplayFeature;
+import androidx.window.layout.FoldingFeature;
+import androidx.window.layout.WindowInfoRepository;
+import androidx.window.layout.WindowLayoutInfo;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -107,7 +109,7 @@ public class WebRtcCallActivity extends BaseActivity implements SafetyNumberChan
   private TooltipPopup                  videoTooltip;
   private WebRtcCallViewModel           viewModel;
   private boolean                       enableVideoIfAvailable;
-  private androidx.window.WindowManager windowManager;
+  private WindowInfoRepositoryCallbackAdapter windowManager;
   private WindowLayoutInfoConsumer      windowLayoutInfoConsumer;
   private ThrottledDebouncer            requestNewSizesThrottle;
 
@@ -145,10 +147,10 @@ public class WebRtcCallActivity extends BaseActivity implements SafetyNumberChan
     enableVideoIfAvailable = getIntent().getBooleanExtra(EXTRA_ENABLE_VIDEO_IF_AVAILABLE, false);
     getIntent().removeExtra(EXTRA_ENABLE_VIDEO_IF_AVAILABLE);
 
-    windowManager            = new androidx.window.WindowManager(this);
+    windowManager            = new WindowInfoRepositoryCallbackAdapter(WindowInfoRepository.Companion.getOrCreate(this));
     windowLayoutInfoConsumer = new WindowLayoutInfoConsumer();
 
-    windowManager.registerLayoutChangeCallback(SignalExecutors.BOUNDED, windowLayoutInfoConsumer);
+    windowManager.addWindowLayoutInfoListener(SignalExecutors.BOUNDED, windowLayoutInfoConsumer);
 
     requestNewSizesThrottle = new ThrottledDebouncer(TimeUnit.SECONDS.toMillis(1));
   }
@@ -209,7 +211,7 @@ public class WebRtcCallActivity extends BaseActivity implements SafetyNumberChan
   @Override
   protected void onDestroy() {
     super.onDestroy();
-    windowManager.unregisterLayoutChangeCallback(windowLayoutInfoConsumer);
+    windowManager.removeWindowLayoutInfoListener(windowLayoutInfoConsumer);
     EventBus.getDefault().unregister(this);
   }
 

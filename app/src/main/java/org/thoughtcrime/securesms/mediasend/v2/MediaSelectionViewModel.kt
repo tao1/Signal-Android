@@ -412,7 +412,7 @@ class MediaSelectionViewModel(
     private val isReply: Boolean,
     private val repository: MediaSelectionRepository
   ) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
       return requireNotNull(modelClass.cast(MediaSelectionViewModel(destination, transportOption, initialMedia, initialMessage, isReply, repository)))
     }
   }

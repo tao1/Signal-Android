@@ -41,7 +41,7 @@ class AppSettingsViewModel(private val subscriptionsRepository: SubscriptionsRep
   }
 
   class Factory(private val subscriptionsRepository: SubscriptionsRepository) : ViewModelProvider.Factory {
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
       return modelClass.cast(AppSettingsViewModel(subscriptionsRepository)) as T
     }
   }

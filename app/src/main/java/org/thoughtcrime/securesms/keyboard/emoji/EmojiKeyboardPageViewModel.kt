@@ -83,7 +83,7 @@ class EmojiKeyboardPageViewModel(repository: EmojiKeyboardPageRepository) : View
 
     private val repository = EmojiKeyboardPageRepository(context)
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
       return requireNotNull(modelClass.cast(EmojiKeyboardPageViewModel(repository)))
     }
   }

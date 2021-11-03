@@ -3,38 +3,56 @@
 dependencyVerification {
     verify = [
 
+        ['androidx.annotation:annotation-experimental:1.1.0',
+         '0157de61a2064047896a058080f3fd67ba57ad9a94857b3f7a363660243e3f90'],
+
         ['androidx.annotation:annotation:1.2.0',
          '9029262bddce116e6d02be499e4afdba21f24c239087b76b3b57d7e98b490a36'],
 
-        ['androidx.arch.core:core-common:2.0.0',
-         '4b80b337779b526e64b0ee0ca9e0df43b808344d145f8e9b1c42a134dac57ad8'],
+        ['androidx.arch.core:core-common:2.1.0',
+         'fe1237bf029d063e7f29fe39aeaf73ef74c8b0a3658486fc29d3c54326653889'],
+
+        ['androidx.arch.core:core-runtime:2.1.0',
+         'dd77615bd3dd275afb11b62df25bae46b10b4a117cd37943af45bdcbf8755852'],
 
         ['androidx.collection:collection:1.0.0',
          '9c8d117b5c2bc120a1cdfeb857e05b495b16c36013570372a708f7827e3ac9f9'],
 
-        ['androidx.core:core-ktx:1.5.0',
-         '5964cfe7a4882da2a00fb6ca3d3a072d04139208186f7bc4b3cb66022764fc42'],
+        ['androidx.concurrent:concurrent-futures:1.0.0',
+         '5595a40e278a7b39fa78a09490e3d7f3faa95c7b01447148bd38b5ade0605c35'],
 
-        ['androidx.core:core:1.5.0',
-         '2b279712795689069cfb63e48b3ab63c32a5649bdda44c482eb8f81ca1a72161'],
+        ['androidx.core:core-ktx:1.7.0',
+         '0d4d007dc81277cd05502a2596044ed2cc55e41501dd1e7f6881200640dc12c0'],
 
-        ['androidx.lifecycle:lifecycle-common:2.0.0',
-         '7bad7a188804adea6fa1f35d5ef99b705f20bd93ecadde484760ff86b535fefc'],
+        ['androidx.core:core:1.7.0',
+         'aaf6734226fff923784f92f65d78a2984dbf17534138855c5ce2038f18656e0b'],
 
-        ['androidx.lifecycle:lifecycle-runtime:2.0.0',
-         'e4afc9e636183f6f3e0edf1cf46121a492ffd2c673075bb07f55c7a99dd43cfb'],
+        ['androidx.lifecycle:lifecycle-common:2.3.1',
+         '15848fb56db32f4c7cdc72b324003183d52a4884d6bf09be708ac7f587d139b5'],
+
+        ['androidx.lifecycle:lifecycle-runtime:2.3.1',
+         'dd294f4a689c71ff877fd41f3b67a3a62f7760d44ce420e6130f1fc3569d8f00'],
 
         ['androidx.versionedparcelable:versionedparcelable:1.1.1',
          '57e8d93260d18d5b9007c9eed3c64ad159de90c8609ebfc74a347cbd514535a4'],
 
-        ['com.google.protobuf:protobuf-javalite:3.10.0',
-         '215a94dbe100130295906b531bb72a26965c7ac8fcd9a75bf8054a8ac2abf4b4'],
+        ['com.google.guava:listenablefuture:1.0',
+         'e4ad7607e5c0477c6f890ef26a49cb8d1bb4dffb650bab4502afee64644e3069'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.4.32',
-         'e1ff6f55ee9e7591dcc633f7757bac25a7edb1cc7f738b37ec652f10f66a4145'],
+        ['com.google.protobuf:protobuf-javalite:3.19.1',
+         '865210ede9acb33456ae00af4e6d02b76c09c1f7622df870a8bd2290aa5ce8d9'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib:1.4.32',
-         '13e9fd3e69dc7230ce0fc873a92a4e5d521d179bcf1bef75a6705baac3bfecba'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31',
+         'dfa2a18e26b028388ee1968d199bf6f166f737ab7049c25a5e2da614404e22ad'],
+
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31',
+         'a25bf47353ce899d843cbddee516d621a73473e7fba97f8d0301e7b4aed7c15f'],
+
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31',
+         'b548f7767aacf029d2417e47440742bd6d3ebede19b60386e23554ce5c4c5fdc'],
+
+        ['org.jetbrains.kotlin:kotlin-stdlib:1.5.31',
+         '4800ceacb2ec0bb9959a087154b8e35318ead1ea4eba32d4bb1b9734222a7e68'],
 
         ['org.jetbrains:annotations:13.0',
          'ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478'],

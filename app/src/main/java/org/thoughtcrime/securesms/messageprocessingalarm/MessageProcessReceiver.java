@@ -71,7 +71,7 @@ public final class MessageProcessReceiver extends BroadcastReceiver {
 
     alarmIntent.setAction(MessageProcessReceiver.BROADCAST_ACTION);
 
-    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 123, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT);
+    PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 123, alarmIntent, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
     AlarmManager  alarmManager  = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
 
     long interval = FeatureFlags.getBackgroundMessageProcessInterval();
