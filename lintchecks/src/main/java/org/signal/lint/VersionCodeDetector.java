@@ -25,7 +25,7 @@ import java.util.List;
 @SuppressWarnings("UnstableApiUsage")
 public final class VersionCodeDetector extends Detector implements Detector.UastScanner {
 
-  static final Issue VERSION_CODE_USAGE = Issue.create("VersionCodeUsage",
+  static final Issue VERSION_CODE_USAGE = Issue.Companion.create("VersionCodeUsage",
                                                        "Using 'VERSION_CODES' reference instead of the numeric value",
                                                        "Signal style is to use the numeric value.",
                                                        Category.CORRECTNESS,

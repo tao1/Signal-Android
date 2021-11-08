@@ -164,15 +164,21 @@ class SignalBluetoothManager(
       return
     }
 
-    val devices: List<BluetoothDevice>? = bluetoothHeadset?.connectedDevices
-    if (devices == null || devices.isEmpty()) {
+    try {
+      val devices: List<BluetoothDevice>? = bluetoothHeadset?.connectedDevices
+      if (devices == null || devices.isEmpty()) {
+        bluetoothDevice = null
+        state = State.UNAVAILABLE
+        Log.i(TAG, "No connected bluetooth headset")
+      } else {
+        bluetoothDevice = devices[0]
+        state = State.AVAILABLE
+        Log.i(TAG, "Connected bluetooth headset. headsetState: ${bluetoothHeadset?.getConnectionState(bluetoothDevice)?.toStateString()} scoAudio: ${bluetoothHeadset?.isAudioConnected(bluetoothDevice)}")
+      }
+    } catch (e: SecurityException) {
       bluetoothDevice = null
       state = State.UNAVAILABLE
-      Log.i(TAG, "No connected bluetooth headset")
-    } else {
-      bluetoothDevice = devices[0]
-      state = State.AVAILABLE
-      Log.i(TAG, "Connected bluetooth headset. headsetState: ${bluetoothHeadset?.getConnectionState(bluetoothDevice)?.toStateString()} scoAudio: ${bluetoothHeadset?.isAudioConnected(bluetoothDevice)}")
+      Log.w(TAG, "Cannot list connected devices", e)
     }
   }
 

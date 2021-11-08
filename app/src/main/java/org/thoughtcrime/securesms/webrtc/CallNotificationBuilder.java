@@ -40,7 +40,7 @@ public class CallNotificationBuilder {
     Intent contentIntent = new Intent(context, WebRtcCallActivity.class);
     contentIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
-    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, contentIntent, 0);
+    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, contentIntent, PendingIntent.FLAG_IMMUTABLE);
 
     NotificationCompat.Builder builder = new NotificationCompat.Builder(context, getNotificationChannel(context, type))
                                                                .setSmallIcon(R.drawable.ic_call_secure_white_24dp)
@@ -84,7 +84,7 @@ public class CallNotificationBuilder {
     Intent contentIntent = new Intent(context, MainActivity.class);
     contentIntent.setFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
 
-    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, contentIntent, 0);
+    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, contentIntent, PendingIntent.FLAG_IMMUTABLE);
 
     return new NotificationCompat.Builder(context, NotificationChannels.OTHER).setSmallIcon(R.drawable.ic_call_secure_white_24dp)
                                                                               .setContentIntent(pendingIntent)
@@ -112,8 +112,8 @@ public class CallNotificationBuilder {
   }
 
   private static NotificationCompat.Action getServiceNotificationAction(Context context, Intent intent, int iconResId, int titleResId) {
-    PendingIntent pendingIntent = Build.VERSION.SDK_INT >= 26 ? PendingIntent.getForegroundService(context, 0, intent, 0)
-                                                              : PendingIntent.getService(context, 0, intent, 0);
+    PendingIntent pendingIntent = Build.VERSION.SDK_INT >= 26 ? PendingIntent.getForegroundService(context, 0, intent, PendingIntent.FLAG_IMMUTABLE)
+                                                              : PendingIntent.getService(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
     return new NotificationCompat.Action(iconResId, context.getString(titleResId), pendingIntent);
   }
@@ -124,7 +124,7 @@ public class CallNotificationBuilder {
     Intent intent = new Intent(context, WebRtcCallActivity.class);
     intent.setAction(action);
 
-    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, 0);
+    PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_IMMUTABLE);
 
     return new NotificationCompat.Action(iconResId, context.getString(titleResId), pendingIntent);
   }

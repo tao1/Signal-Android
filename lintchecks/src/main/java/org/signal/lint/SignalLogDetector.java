@@ -24,7 +24,7 @@ import java.util.List;
 @SuppressWarnings("UnstableApiUsage")
 public final class SignalLogDetector extends Detector implements Detector.UastScanner {
 
-  static final Issue LOG_NOT_SIGNAL = Issue.create("LogNotSignal",
+  static final Issue LOG_NOT_SIGNAL = Issue.Companion.create("LogNotSignal",
                                                    "Logging call to Android Log instead of Signal's Logger",
                                                    "Signal has its own logger which must be used.",
                                                    Category.MESSAGES,
@@ -32,7 +32,7 @@ public final class SignalLogDetector extends Detector implements Detector.UastSc
                                                    Severity.ERROR,
                                                    new Implementation(SignalLogDetector.class, Scope.JAVA_FILE_SCOPE));
 
-  static final Issue LOG_NOT_APP = Issue.create("LogNotAppSignal",
+  static final Issue LOG_NOT_APP = Issue.Companion.create("LogNotAppSignal",
                                                 "Logging call to Signal Service Log instead of App level Logger",
                                                 "Signal app layer has its own logger which must be used.",
                                                 Category.MESSAGES,
@@ -40,7 +40,7 @@ public final class SignalLogDetector extends Detector implements Detector.UastSc
                                                 Severity.ERROR,
                                                 new Implementation(SignalLogDetector.class, Scope.JAVA_FILE_SCOPE));
 
-  static final Issue INLINE_TAG = Issue.create("LogTagInlined",
+  static final Issue INLINE_TAG = Issue.Companion.create("LogTagInlined",
                                                "Use of an inline string in a TAG",
                                                "Often a sign of left in temporary log statements, always use a tag constant.",
                                                Category.MESSAGES,
