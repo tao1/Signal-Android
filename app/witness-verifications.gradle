@@ -540,26 +540,26 @@ dependencyVerification {
         ['org.greenrobot:eventbus:3.2.0',
          '7b0f9e9d77607ffd2d17ff5742af218063509e45c9cc5bacf0db2c153e9c5e31'],
 
-        ['org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.5.31',
-         'f7a2a728bf0d3d747103e8c9aa70691da8cb520d16a356b6c410fff01a3517ab'],
+        ['org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.6.0',
+         '5ae9ef8a349e2c3636acb279b215c91db6984b4b16a5295bf88476ba0ed12ac8'],
 
-        ['org.jetbrains.kotlin:kotlin-parcelize-runtime:1.5.31',
-         'bd018f493a4be540482beb842d40297d49449bc9e78789b9b84f61b7e0260d57'],
+        ['org.jetbrains.kotlin:kotlin-parcelize-runtime:1.6.0',
+         'd2b09ca34bf3a982adf7e95c82ea2761d9a29db39e241cd8145f5593c8c449aa'],
 
         ['org.jetbrains.kotlin:kotlin-reflect:1.5.31',
          '6e0f5490e6b9649ddd2670534e4d3a03bd283c3358b8eef5d1304fd5f8a5a4fb'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31',
-         'dfa2a18e26b028388ee1968d199bf6f166f737ab7049c25a5e2da614404e22ad'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0',
+         '644a7257c23b51a1fd5068960e40922e3e52c219f11ece3e040a3abc74823f22'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31',
-         'a25bf47353ce899d843cbddee516d621a73473e7fba97f8d0301e7b4aed7c15f'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.0',
+         '870d35fd266b2daf64c1080fe51824d3c368f7995384a8d7c5fc2fdc40eb7b3a'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31',
-         'b548f7767aacf029d2417e47440742bd6d3ebede19b60386e23554ce5c4c5fdc'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0',
+         'ab0547c495953214a5f2b28150014f4e02133678d52b77d76375ea235e443dbd'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib:1.5.31',
-         '4800ceacb2ec0bb9959a087154b8e35318ead1ea4eba32d4bb1b9734222a7e68'],
+        ['org.jetbrains.kotlin:kotlin-stdlib:1.6.0',
+         '115daea30b0d484afcf2360237b9d9537f48a4a2f03f3cc2a16577dfc6e90342'],
 
         ['org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2',
          '86cf9892b0bd5306a8f4d7ad8a82356f614dc7d519eb3063b0887d7c2b405928'],

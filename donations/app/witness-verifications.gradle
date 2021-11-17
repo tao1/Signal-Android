@@ -165,17 +165,17 @@ dependencyVerification {
         ['io.reactivex.rxjava3:rxjava:3.1.2',
          '8d784075bec0b7c55042c109a4de8923b3b6d2ebd2e00912d518f07240f9c23a'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.5.31',
-         'dfa2a18e26b028388ee1968d199bf6f166f737ab7049c25a5e2da614404e22ad'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-common:1.6.0',
+         '644a7257c23b51a1fd5068960e40922e3e52c219f11ece3e040a3abc74823f22'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.5.31',
-         'a25bf47353ce899d843cbddee516d621a73473e7fba97f8d0301e7b4aed7c15f'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.6.0',
+         '870d35fd266b2daf64c1080fe51824d3c368f7995384a8d7c5fc2fdc40eb7b3a'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.5.31',
-         'b548f7767aacf029d2417e47440742bd6d3ebede19b60386e23554ce5c4c5fdc'],
+        ['org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.0',
+         'ab0547c495953214a5f2b28150014f4e02133678d52b77d76375ea235e443dbd'],
 
-        ['org.jetbrains.kotlin:kotlin-stdlib:1.5.31',
-         '4800ceacb2ec0bb9959a087154b8e35318ead1ea4eba32d4bb1b9734222a7e68'],
+        ['org.jetbrains.kotlin:kotlin-stdlib:1.6.0',
+         '115daea30b0d484afcf2360237b9d9537f48a4a2f03f3cc2a16577dfc6e90342'],
 
         ['org.jetbrains:annotations:13.0',
          'ace2a10dc8e2d5fd34925ecac03e4988b2c0f851650c94b8cef49ba1bd111478'],
