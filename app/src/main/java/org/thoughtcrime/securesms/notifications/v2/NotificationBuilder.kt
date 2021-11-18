@@ -335,7 +335,7 @@ sealed class NotificationBuilder(protected val context: Context) {
         context,
         0,
         ConversationIntents.createBubbleIntent(context, conversation.recipient.id, conversation.threadId),
-        PendingIntent.FLAG_IMMUTABLE
+        PendingIntent.FLAG_MUTABLE
       )
 
       val bubbleMetadata = NotificationCompat.BubbleMetadata.Builder(intent, AvatarUtil.getIconCompatForShortcut(context, conversation.recipient))

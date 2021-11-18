@@ -118,7 +118,7 @@ data class NotificationConversation(
 
     return TaskStackBuilder.create(context)
       .addNextIntentWithParentStack(intent)
-      .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)!!
+      .getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)!!
   }
 
   fun getDeleteIntent(context: Context): PendingIntent? {
@@ -136,7 +136,7 @@ data class NotificationConversation(
       .putExtra(DeleteNotificationReceiver.EXTRA_THREAD_IDS, longArrayOf(threadId))
       .makeUniqueToPreventMerging()
 
-    return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+    return PendingIntent.getBroadcast(context, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)
   }
 
   fun getMarkAsReadIntent(context: Context): PendingIntent {
@@ -146,7 +146,7 @@ data class NotificationConversation(
       .putExtra(MarkReadReceiver.NOTIFICATION_ID_EXTRA, notificationId)
       .makeUniqueToPreventMerging()
 
-    return PendingIntent.getBroadcast(context, (threadId * 2).toInt(), intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+    return PendingIntent.getBroadcast(context, (threadId * 2).toInt(), intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)
   }
 
   fun getQuickReplyIntent(context: Context): PendingIntent {
@@ -154,7 +154,7 @@ data class NotificationConversation(
       .build()
       .makeUniqueToPreventMerging()
 
-    return PendingIntent.getActivity(context, (threadId * 2).toInt() + 1, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+    return PendingIntent.getActivity(context, (threadId * 2).toInt() + 1, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)
   }
 
   fun getRemoteReplyIntent(context: Context, replyMethod: ReplyMethod): PendingIntent {
@@ -165,7 +165,7 @@ data class NotificationConversation(
       .putExtra(RemoteReplyReceiver.EARLIEST_TIMESTAMP, notificationItems.first().timestamp)
       .makeUniqueToPreventMerging()
 
-    return PendingIntent.getBroadcast(context, (threadId * 2).toInt() + 1, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)
+    return PendingIntent.getBroadcast(context, (threadId * 2).toInt() + 1, intent, PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE)
   }
 
   fun getTurnOffJoinedNotificationsIntent(context: Context): PendingIntent {
@@ -173,7 +173,7 @@ data class NotificationConversation(
       context,
       0,
       TurnOffContactJoinedNotificationsActivity.newIntent(context, threadId),
-      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+      PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_MUTABLE
     )
   }
 
